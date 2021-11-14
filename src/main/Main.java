@@ -1,13 +1,19 @@
 package main;
 
+import java.io.IOException;
+
+import dnsClient.DNSClient;
+import dnsLocalServer.DNSLocalServer;
+
 public class Main {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		if(args.length < 2) {
-			System.out.println("\nNot enough parameters!");
-			
-		}
+	public static void main(String[] args) throws IOException{
+		
+		DNSClient dnsClient = new DNSClient();		
+		dnsClient.runTCPClient();
+		
+		//DNSLocalServer dnsLocalServer = new DNSLocalServer();
+		//dnsLocalServer.runTCPServer();
 		
 		
 	}
